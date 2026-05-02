@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4272342
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000045514787
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.1607158
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -61,7 +61,16 @@ PrefabInstance:
       addedObject: {fileID: 1671355759852522886}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1335464738614925389}
+      addedObject: {fileID: 2231462745899475658}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6049537644838485521}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5611433647958591761}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6980453564653079105}
   m_SourcePrefab: {fileID: 100100000, guid: 34e518971ff027f4789d4759fb223bb4, type: 3}
 --- !u!1 &7864958415872084965 stripped
 GameObject:
@@ -80,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1185884914
+  GlobalObjectIdHash: 1432475270
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -93,7 +102,7 @@ MonoBehaviour:
   AutoObjectParentSync: 1
   SyncOwnerTransformWhenParented: 1
   AllowOwnerToParent: 0
---- !u!114 &1335464738614925389
+--- !u!114 &2231462745899475658
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -102,6 +111,71 @@ MonoBehaviour:
   m_GameObject: {fileID: 7864958415872084965}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d25588b3b66f7ad4db9f36e18274ea90, type: 3}
+  m_Script: {fileID: 11500000, guid: 87317596ecabc854dac9913d84a26ccd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  CharacterController: {fileID: 0}
+  CharacterNetworkManager: {fileID: 0}
+--- !u!114 &6049537644838485521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864958415872084965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4efa1d82dd27ab1438d3c10972855d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerLocomotionManager
+  vertical_movement: 0
+  horizontal_movement: 0
+  move_amount: 0
+  walking_speed: 2
+  running_speed: 5
+--- !u!143 &-5611433647958591761
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864958415872084965}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.8
+  m_Radius: 0.23
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &-6980453564653079105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864958415872084965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f4f5cb295506a45b0dc297ea5d38d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerNetworkManager
+  ShowTopMostFoldoutHeaderGroup: 1
+  NetworkPosition:
+    UpdateTraits:
+      MinSecondsBetweenUpdates: 0
+      MaxSecondsBetweenUpdates: 0
+    m_InternalValue: {x: 0, y: 0, z: 0}
+  NetworkPositionVelocity: {x: 0, y: 0, z: 0}
+  NetworkPositionSmoothTime: 0
